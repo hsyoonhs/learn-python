@@ -108,13 +108,13 @@
 
 # ------------------------------ #
 
-# 수정 필요
-
 # i, total = 0, 0
 
 # startNum = int(input("시작값을 입력하세요: "))
 # endNum = int(input("끝값을 입력하세요: "))
 # increNum = int(input("증가값을 입력하세요: "))
+
+# i = startNum
 
 # while i < (endNum + 1):
 #     total += i
@@ -197,11 +197,9 @@
 
 # ------------------------------ #
 
-# 수정 필요
-
 total, i = 0, 0
 
-while i < 101:
+while i < 100:
     i += 1
     if i % 3 == 0:
         continue
