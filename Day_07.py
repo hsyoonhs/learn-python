@@ -230,9 +230,51 @@ print(dic)
 # ------------------------------ #
 
 # 리스트의 얕은 복사와 깊은 복사
-    # 추가 정리 필요
+
+# 얕은 복사
+oldList = ['짜장면', '탕수육', '군만두']
+newList = oldList
+print(newList)
+oldList[0] = '짬뽕'
+oldList.append('깐풍기')
+print(newList)
+
+# 깊은 복사
+oldList = ['짜장면', '탕수육', '군만두']
+newList = oldList[:]
+print(newList)
+oldList[0] = '짬뽕'
+oldList.append('깐풍기')
+print(newList)
 
 # ------------------------------ #
 
+# 스택(Stack): 한 쪽 끝이 막혀 먼저 들어간 것이 나중에 나오는 (= 가장 나중에 들어간 것이 가장 먼저 나오는 (Last-In-First-Out)) 형태의 자료구조
+    # Top: 스택에 들어있는 자료 중 가장 마지막 자료의 바로 다음 위치
+    # Push: 자료를 넣는 것
+    # Pop: 자료를 빼는 것
+    # 스택의 예: 웹 브라우저 뒤로가기, 실행 취소 (Ctrl + Z)
+
 # 리스트로 스택 구현
-    # 추가 정리 필요
+
+parking = []
+top = 0
+
+parking.append('자동차 A')
+top += 1
+
+parking.append('자동차 B')
+top += 1
+parking.append('자동차 C')
+top += 1
+
+top -= 1
+outCar = parking.pop()
+print(outCar)
+
+top -= 1
+outCar = parking.pop()
+print(outCar)
+
+# 큐(Queue): 파이프같은 모양으로 양쪽이 뚫린, 한 쪽으로 들어가면 다른 한 쪽으로 나오는 (= 가장 먼저 들어간 것이 가장 먼저 나오는 (First-In-First-Out)) 형태의 자료구조
+    # 큐의 예: 작업 예약, 프린터 스케줄, 콜센터 대기
